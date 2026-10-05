@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/* ─── SKY COMMAND THEME ─── */
+:root {
+  --sky-deep: #061a2e;
+  --sky-mid: #0b2d4a;
+  --sky-azure: #0077b6;
+  --sky-electric: #00a8e8;
+  --sky-glow: #48cae4;
+  --sky-cloud: #e8f4fd;
+  --sky-white: #f0f8ff;
+  --sky-ice: #caf0f8;
+  --sky-steel: #1e3a5f;
+  --sky-glass: rgba(0, 119, 182, 0.08);
+  --sky-border: rgba(0, 168, 232, 0.15);
+  --sky-text: #e0edf7;
+  --sky-text-muted: #8ba4be;
+  --background: #061a2e;
+  --foreground: #e0edf7;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sky-deep: var(--sky-deep);
+  --color-sky-mid: var(--sky-mid);
+  --color-sky-azure: var(--sky-azure);
+  --color-sky-electric: var(--sky-electric);
+  --color-sky-glow: var(--sky-glow);
+  --color-sky-cloud: var(--sky-cloud);
+  --color-sky-ice: var(--sky-ice);
+  --color-sky-steel: var(--sky-steel);
+  --color-sky-glass: var(--sky-glass);
+  --color-sky-border: var(--sky-border);
+  --color-sky-text: var(--sky-text);
+  --color-sky-text-muted: var(--sky-text-muted);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--sky-deep); }
+::-webkit-scrollbar-thumb {
+  background: var(--sky-steel);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--sky-azure); }
+
+/* ─── Selection ─── */
+::selection {
+  background: rgba(0, 168, 232, 0.3);
+  color: white;
+}
+
+/* ─── Smooth scroll global ─── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ─── Gradient text utility ─── */
+.gradient-sky {
+  background: linear-gradient(135deg, #48cae4, #00a8e8, #0077b6, #90e0ef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
